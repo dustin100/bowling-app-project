@@ -134,14 +134,10 @@ $(function () {
     bowlingApp.getShowPin = function () {
         this.pinNumber.forEach(function (item, index) {
             if (item === true) {
-                return (document.getElementById(
-                    bowlingApp.pinNumbers[index].pinId
-                ).style.visibility = "visible");
+                return $(`#${bowlingApp.pinNumbers[index].pinId}`).css('visibility', 'visible');
 
             } else {
-                return (document.getElementById(
-                    bowlingApp.pinNumbers[index].pinId
-                ).style.visibility = "hidden");
+                return $(`#${bowlingApp.pinNumbers[index].pinId}`).css('visibility', 'hidden');
             }
         });
     };
@@ -155,17 +151,21 @@ $(function () {
 
     //function that checks if two arrays are equal
     bowlingApp.checkEqual = function (arr1, arr2) {
-        if (arr1 === arr2)
-            return true;
+        if (arr1.length !== arr2.length) return false;
+        for (var i = arr1.length; i--;) {
+            if (arr1[i] != arr2[i]) return false;
+        }
+
+        return true;
     };
 
-    // adds 12 to a right answer and updates the DOM
+
     bowlingApp.plusScore = function () {
         bowlingApp.score += 12;
         $('#score').text(bowlingApp.score);
     };
 
-    // subtracts 3 from a wrong answer and updates the DOM
+
     bowlingApp.minusScore = function () {
         if (bowlingApp.score <= 0) {
             bowlingApp.score = 0
