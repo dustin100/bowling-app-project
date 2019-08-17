@@ -134,7 +134,6 @@ $(function () {
     bowlingApp.getShowPin = function () {
         this.pinNumber.forEach(function (item, index) {
             if (item === true) {
-                console.log(bowlingApp.pinNumbers[index].pinId)
                 return (document.getElementById(
                     bowlingApp.pinNumbers[index].pinId
                 ).style.visibility = "visible");
@@ -160,13 +159,13 @@ $(function () {
             return true;
     };
 
-
+    // adds 12 to a right answer and updates the DOM
     bowlingApp.plusScore = function () {
         bowlingApp.score += 12;
         $('#score').text(bowlingApp.score);
     };
 
-
+    // subtracts 3 from a wrong answer and updates the DOM
     bowlingApp.minusScore = function () {
         if (bowlingApp.score <= 0) {
             bowlingApp.score = 0
