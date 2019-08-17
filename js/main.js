@@ -2,18 +2,47 @@ $(function () {
 
 
     const bowlingApp = {};
-    (bowlingApp.pinNumbers = [
-        "one",
-        "two",
-        "three",
-        "four",
-        "five",
-        "six",
-        "seven",
-        "eight",
-        "nine",
-        "ten"
-    ]),
+    bowlingApp.pinNumbers = [{
+            pinId: 'one',
+            answerKey: 1
+        },
+        {
+            pinId: 'two',
+            answerKey: 2
+        },
+        {
+            pinId: 'three',
+            answerKey: 3
+        },
+        {
+            pinId: 'four',
+            answerKey: 4
+        },
+        {
+            pinId: 'five',
+            answerKey: 5
+        },
+        {
+            pinId: 'six',
+            answerKey: 6
+        },
+        {
+            pinId: 'seven',
+            answerKey: 7
+        },
+        {
+            pinId: 'eight',
+            answerKey: 8
+        },
+        {
+            pinId: 'nine',
+            answerKey: 9
+        },
+        {
+            pinId: 'ten',
+            answerKey: 10
+        }
+    ];
     bowlingApp.score = 0;
     bowlingApp.time = 60;
     bowlingApp.answer = [];
@@ -101,15 +130,18 @@ $(function () {
     };
 
 
+
     bowlingApp.getShowPin = function () {
         this.pinNumber.forEach(function (item, index) {
             if (item === true) {
+                console.log(bowlingApp.pinNumbers[index].pinId)
                 return (document.getElementById(
-                    bowlingApp.pinNumbers[index]
+                    bowlingApp.pinNumbers[index].pinId
                 ).style.visibility = "visible");
+
             } else {
                 return (document.getElementById(
-                    bowlingApp.pinNumbers[index]
+                    bowlingApp.pinNumbers[index].pinId
                 ).style.visibility = "hidden");
             }
         });
@@ -118,7 +150,7 @@ $(function () {
     //pushs the correct answer into new array
     bowlingApp.getAnswer = function () {
         this.pinNumber.map(function (item, index) {
-            if (item === true) bowlingApp.answer.push(bowlingApp.pinNumbers[index]);
+            if (item === true) bowlingApp.answer.push(bowlingApp.pinNumbers[index].answerKey);
         });
     };
 
