@@ -70,6 +70,9 @@ header {
   .center-content h3 {
     text-align: center; }
 
+.missing {
+  background: grey; }
+
 .pin-row {
   display: flex;
   justify-content: center;
