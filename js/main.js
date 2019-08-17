@@ -134,7 +134,6 @@ $(function () {
     bowlingApp.getShowPin = function () {
         this.pinNumber.forEach(function (item, index) {
             if (item === true) {
-
                 return $(`#${bowlingApp.pinNumbers[index].pinId}`).css('visibility', 'visible');
 
             } else {
