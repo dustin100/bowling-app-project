@@ -2,67 +2,97 @@
 <html lang="en">
 
 <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" type="text/css" href="styles.css">
-        <title>bowling pins</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="styles/normalize.css">
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <title>Bowling Pins</title>
 </head>
 
 <body>
-        <div class=contanier>
-                <header>
-                        <div id=start-button class=bottom-button>
-                                <button>Start</button>
-                        </div>
-                        <p>Timer <span id=count-down-time>99</span></p>
-                        <p>Score <span id="score">0</span></p>
-                </header>
+
+    <div class="site-wrapper">
+
+        <header>
+            <h1>Bowling Pin Game</h1>
+        </header>
+
+
+        <div class="content-wrapper">
+
+            <div class="left-content">
+                <div class="display-box">
+                    <p class="time-text">TIME</p>
+                    <p class="display-box-text"> <span id=count-down-time>60</span></p>
+
+                </div>
+                <div class="display-box">
+                    <p class="score-text">SCORE</p>
+                    <p class="display-box-text"> <span id="score">0</span></p>
+
+                </div>
+
+
+            </div>
+
+            <div class="center-content">
+
                 <div class="bowling-pins">
-                        <div class="pin-row">
-                                <div id=one class=pin> <img
-                                                src="http://brunswickbowling.com/uploads/bowling_centers/Equipment-Parts-Supplies/Center-Maintenance/Parts-and-Supplies/_600x600_crop_center-center_none/pins_score_king_crown_1600x1600.png">
-                                </div>
-                        </div>
-                        <div class="pin-row">
-                                <div id=two class=pin> <img
-                                                src="http://brunswickbowling.com/uploads/bowling_centers/Equipment-Parts-Supplies/Center-Maintenance/Parts-and-Supplies/_600x600_crop_center-center_none/pins_score_king_crown_1600x1600.png">
-                                </div>
-                                <div id=three class=pin> <img
-                                                src="http://brunswickbowling.com/uploads/bowling_centers/Equipment-Parts-Supplies/Center-Maintenance/Parts-and-Supplies/_600x600_crop_center-center_none/pins_score_king_crown_1600x1600.png">
-                                </div>
-                        </div>
-                        <div class="pin-row">
-                                <div id=four class=pin> <img
-                                                src="http://brunswickbowling.com/uploads/bowling_centers/Equipment-Parts-Supplies/Center-Maintenance/Parts-and-Supplies/_600x600_crop_center-center_none/pins_score_king_crown_1600x1600.png">
-                                </div>
-                                <div id=five class=pin> <img
-                                                src="http://brunswickbowling.com/uploads/bowling_centers/Equipment-Parts-Supplies/Center-Maintenance/Parts-and-Supplies/_600x600_crop_center-center_none/pins_score_king_crown_1600x1600.png">
-                                </div>
-                                <div id=six class=pin> <img
-                                                src="http://brunswickbowling.com/uploads/bowling_centers/Equipment-Parts-Supplies/Center-Maintenance/Parts-and-Supplies/_600x600_crop_center-center_none/pins_score_king_crown_1600x1600.png">
-                                </div>
-                        </div>
-                        <div class="pin-row">
-                                <div id=seven class=pin> <img
-                                                src="http://brunswickbowling.com/uploads/bowling_centers/Equipment-Parts-Supplies/Center-Maintenance/Parts-and-Supplies/_600x600_crop_center-center_none/pins_score_king_crown_1600x1600.png">
-                                </div>
-                                <div id=eight class=pin> <img
-                                                src="http://brunswickbowling.com/uploads/bowling_centers/Equipment-Parts-Supplies/Center-Maintenance/Parts-and-Supplies/_600x600_crop_center-center_none/pins_score_king_crown_1600x1600.png">
-                                </div>
-                                <div id=nine class=pin> <img
-                                                src="http://brunswickbowling.com/uploads/bowling_centers/Equipment-Parts-Supplies/Center-Maintenance/Parts-and-Supplies/_600x600_crop_center-center_none/pins_score_king_crown_1600x1600.png">
-                                </div>
-                                <div id=ten class=pin> <img
-                                                src="http://brunswickbowling.com/uploads/bowling_centers/Equipment-Parts-Supplies/Center-Maintenance/Parts-and-Supplies/_600x600_crop_center-center_none/pins_score_king_crown_1600x1600.png">
-                                </div>
-                        </div>
+                    <div class="pin-row">
+                        <div id=one class=pin> <img src="img/pin_x300_size.png"></div>
+                    </div>
+                    <div class="pin-row">
+                        <div id=two class=pin> <img src="img/pin_x300_size.png"></div>
+                        <div id=three class=pin> <img src="img/pin_x300_size.png"></div>
+                    </div>
+                    <div class="pin-row">
+                        <div id=six class=pin> <img src="img/pin_x300_size.png"></div>
+                        <div id=five class=pin> <img src="img/pin_x300_size.png"></div>
+                        <div id=four class=pin> <img src="img/pin_x300_size.png"></div>
+                    </div>
+                    <div class="pin-row">
+                        <div id=seven class=pin> <img src="img/pin_x300_size.png"></div>
+                        <div id=eight class=pin> <img src="img/pin_x300_size.png"></div>
+                        <div id=nine class=pin> <img src="img/pin_x300_size.png"></div>
+                        <div id=ten class=pin> <img src="img/pin_x300_size.png"></div>
+                    </div>
+                </div>
+                <div class="display-correctness">
+                    <p>#</p>
+                </div>
+                <div id="play-again-button">
+                    <button>PLAY AGAIN?</button>
+                </div>
+            </div>
+            <div class="right-content">
+                <div class="instruction">
+                    <p>Enter the pins using a comma between each when prompted</p>
+                </div>
+                <div id="start-button">
+                    <button>PLAY</button>
                 </div>
 
+                <form>
+                    <label for="item">Enter Answer</label>
+                    <input class="disable-elements" type="text" id="person-answer"
+                        placeholder="Enter Pins left standing">
+                    <input class="disable-elements" type="submit" value="Enter">
+                </form>
 
-                <div id=info>
-                        <p> enter the pins using a comma between each when prompted </p>
-                </div>
+            </div>
+
         </div>
-        <script type="text/javascript" src="main.js"></script>
+
+
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+    </script>
+    <script type="text/javascript" src="js/refactor-jquery.js">
+    </script>
+
+
 </body>
 
 </html>
