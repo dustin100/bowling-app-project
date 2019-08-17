@@ -134,10 +134,22 @@ $(function () {
     bowlingApp.getShowPin = function () {
         this.pinNumber.forEach(function (item, index) {
             if (item === true) {
+<<<<<<< HEAD
                 return $(`#${bowlingApp.pinNumbers[index].pinId}`).css('visibility', 'visible');
 
             } else {
                 return $(`#${bowlingApp.pinNumbers[index].pinId}`).css('visibility', 'hidden');
+=======
+                console.log(bowlingApp.pinNumbers[index].pinId)
+                return (document.getElementById(
+                    bowlingApp.pinNumbers[index].pinId
+                ).style.visibility = "visible");
+
+            } else {
+                return (document.getElementById(
+                    bowlingApp.pinNumbers[index].pinId
+                ).style.visibility = "hidden");
+>>>>>>> 72bd8dc37214f724b045e444698e179785de790d
             }
         });
     };
