@@ -205,7 +205,6 @@ $(function () {
         bowlingApp.getShowPin();
         bowlingApp.getAnswer();
         bowlingApp.startCount();
-        bowlingApp.resetTimer();
         bowlingApp.checkPlaying();
         console.log(bowlingApp.answer);
 
