@@ -134,10 +134,12 @@ $(function () {
     bowlingApp.getShowPin = function () {
         this.pinNumber.forEach(function (item, index) {
             if (item === true) {
-                return $(`#${bowlingApp.pinNumbers[index].pinId}`).css('visibility', 'visible');
+                return $(`#${bowlingApp.pinNumbers[index].pinId} img`).attr('src',
+                    'img/pin_x300_size.png');
 
             } else {
-                return $(`#${bowlingApp.pinNumbers[index].pinId}`).css('visibility', 'hidden');
+                return $(`#${bowlingApp.pinNumbers[index].pinId} img`).attr('src',
+                    'img/missing.png');
 
             }
         });
@@ -178,15 +180,16 @@ $(function () {
 
 
     // stop form from refreshing the page
-    bowlingApp.getPersonAnswer = $('form').on('submit', function (e) {
+    bowlingApp.getUserAnswer = $('form').on('submit', function (e) {
         e.preventDefault()
         // grab form inut from user 
-        bowlingApp.personAnswer = $('#person-answer').val().split(',');
-        console.log(bowlingApp.personAnswer);
+        bowlingApp.userAnswer = $('#person-answer').val().split(',');
+        console.log(bowlingApp.userAnswer);
+
 
 
         // checks if user's answer matches the correct answer
-        if (bowlingApp.checkEqual(bowlingApp.answer, bowlingApp.personAnswer) === false) {
+        if (bowlingApp.checkEqual(bowlingApp.answer, bowlingApp.userAnswer) === false) {
             bowlingApp.minusScore();
             $('.display-correctness').text('Try Again').css({
                 display: 'block',
